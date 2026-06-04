@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 19th Birthday Dito! 🎖️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Background gradasi bertema patriotik/khaki modern */
+            background: linear-gradient(135deg, #2e4031, #1a241b);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Card Utama */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            z-index: 10;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: muncul 1s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid #4caf50;
+        }
+
+        @keyframes muncul {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Lencana Umur */
+        .badge {
+            background: #2e4031;
+            color: #d4af37; /* Warna emas */
+            font-weight: bold;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            border: 1px solid #d4af37;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: #1a241b;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .nama {
+            color: #2e4031;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ucapan {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* Tombol Komando */
+        .btn {
+            background: #388e3c;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(56, 142, 60, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: #2e4031;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Pesan Harapan TNI (Hidden) */
+        .harapan-tni {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: #e8f5e9;
+            border-top: 4px solid #2e4031;
+            border-radius: 10px;
+            color: #1a241b;
+            animation: slideDown 0.5s forwards ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .harapan-tni h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #2e4031;
+        }
+
+        /* Efek Dekorasi Daun/Bintang Gugur */
+        .decor {
+            position: absolute;
+            color: rgba(212, 175, 55, 0.3);
+            font-size: 24px;
+            bottom: -50px;
+            animation: terbang 6s infinite linear;
+        }
+
+        @keyframes terbang {
+            0% { bottom: -50px; transform: translateX(0) rotate(0deg); }
+            100% { bottom: 110vh; transform: translateX(100px) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Efek Dekorasi Bintang di Background -->
+    <div class="decor" style="left: 10%; animation-delay: 0s;">★</div>
+    <div class="decor" style="left: 25%; animation-delay: 2s; font-size: 35px;">🪖</div>
+    <div class="decor" style="left: 75%; animation-delay: 1s; animation-duration: 8s;">★</div>
+    <div class="decor" style="left: 90%; animation-delay: 4s; font-size: 30px;">★</div>
+
+    <!-- Konten Utama -->
+    <div class="card">
+        <div class="badge">PROKLARE 19 TAHUN</div>
+        <h1>Selamat Ulang Tahun</h1>
+        <div class="nama">M. Dito Rahmadiansyah</div>
+        
+        <p class="ucapan">
+            Selamat memasuki usia 19 tahun! Di usia yang semakin matang ini, semoga langkahmu selalu dituntun oleh keberanian, hati yang luhur, dan fisik yang tangguh. Teruslah bertumbuh menjadi pria yang disiplin, kuat, dan membanggakan bagi orang-orang di sekitarmu.
+        </p>
+        
+        <button class="btn" onclick="siapGrak()">Buka Pesan Komando 🎖️</button>
+        
+        <!-- Pesan Khusus Cita-Cita TNI -->
+        <div id="pesanTni" class="harapan-tni">
+            <h3>Siap, Sukses Menanti! 🪖🇲🇨</h3>
+            <p>"Yakinlah bahwa perjuanganmu hari ini adalah cara terbaik membentuk mental seorang prajurit. Semoga jalanmu dimudahkan untuk mengabdi pada negeri dan segera berseragam <strong>TNI</strong>. Jaga fisik, kuatkan mental, pantang mundur sebelum tujuan tercapai! Avignam Jagat Samagram!"</p>
+        </div>
+    </div>
+
+    <script>
+        function siapGrak() {
+            var pesan = document.getElementById("pesanTni");
+            if (pesan.style.display === "block") {
+                pesan.style.display = "none";
+            } else {
+                pesan.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
